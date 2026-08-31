@@ -1,0 +1,11 @@
+shipment_id,customer_id,shipment_date,origin,destination,status,weight_kg,shipping_cost,carrier,delivery_date,priority,warehouse_id
+SHP1015,CUST015,2026-08-24,Bangalore,Mumbai,Delivered,7.2,290.0,BlueDart,2026-08-26,High,WH-BLR-01
+SHP1016,CUST016,2026-08-24,Delhi,Pune,In Transit,14.6,510.0,DTDC,,Normal,WH-DEL-01
+SHP1017,CUST017,2026-08-25,Chennai,Bangalore,Delivered,5.5,240.0,Delhivery,2026-08-27,Low,WH-CHE-01
+SHP1018,CUST018,2026-08-25,Hyderabad,Mumbai,Pending,9.8,360.0,BlueDart,,Normal,WH-HYD-01
+SHP1019,CUST019,25-08-2026,Pune,Delhi,Delivered,16.2,575.0,DTDC,2026-08-28,High,WH-PUN-01
+SHP1020,CUST020,2026-08-25,Kolkata,Delhi,Delivered,4.7,205.0,Delhivery,2026-08-27,Low,WH-KOL-01
+SHP1021,CUST021,2026-08-26,Mumbai,Chennai,In Transit,12.0,430.0,BlueDart,,Normal,WH-MUM-01
+SHP1022,,2026-08-26,Bangalore,Hyderabad,Delivered,6.1,255.0,DTDC,2026-08-28,High,WH-BLR-01
+SHP1023,CUST023,2026-08-26,Delhi,Kolkata,Delivered,8.9,325.0,Delhivery,2026-08-29,Normal,WH-DEL-01
+SHP1024,CUST024,2026-08-27, Chennai ,Pune,Pending,3.6,175.0,BlueDart,,Low,WH-CHE-01

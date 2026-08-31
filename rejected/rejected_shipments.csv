@@ -1,0 +1,8 @@
+shipment_id,customer_id,shipment_date,origin,destination,status,weight_kg,shipping_cost,carrier,delivery_date,priority,warehouse_id,service_type,rejection_reason
+SHP1006,,2026-08-21,Kolkata,Delhi,Delivered,7.5,280.0,Delhivery,2026-08-23,,,,Missing customer_id
+SHP1007,CUST007,,Bangalore,Chennai,Pending,4.2,190.0,BlueDart,,,,,Missing shipment_date
+SHP1022,,2026-08-26,Bangalore,Hyderabad,Delivered,6.1,255.0,DTDC,2026-08-28,High,WH-BLR-01,,Missing customer_id
+SHP1030,,2026-08-29,Kolkata,Delhi,Delivered,5.7,245.0,Delhivery,2026-08-31,,,,Missing customer_id
+SHP1031,CUST031,,Pune,Mumbai,In Transit,11.8,420.0,BlueDart,,,,,Missing shipment_date
+SHP1035,CUST035,2026-08-30,Chennai,Pune,Delivered,-2.0,180.0,Delhivery,2026-02-09,Low,WH-CHE-01,Standard,Invalid weight_kg
+SHP1038,,2026-08-31,Pune,Delhi,Delivered,5.1,225.0,Delhivery,2026-02-09,Normal,WH-PUN-01,Standard,Missing customer_id

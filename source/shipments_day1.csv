@@ -1,0 +1,16 @@
+shipment_id,customer_id,shipment_date,origin,destination,status,weight_kg,shipping_cost,carrier,delivery_date
+SHP1001,CUST001,2026-08-20, Bangalore ,Mumbai,Delivered,12.5,450.0,BlueDart,2026-08-23
+SHP1002,CUST002,20/08/2026,Delhi,Mumbai,In Transit,8.2,300.0,DTDC,
+SHP1003,CUST003,2026/08/20,Chennai,Hyderabad,Delivered,5.0,220.0,Delhivery,2026-08-22
+SHP1004,CUST004,2026-08-21,Pune,Bangalore,Pending,15.7,520.0,BlueDart,
+SHP1005,CUST005,2026-08-21,Mumbai,Delhi,Delivered,10.0,410.0,DTDC,2026-08-24
+SHP1005,CUST005,2026-08-21,Mumbai,Delhi,Delivered,10.0,410.0,DTDC,2026-08-24
+SHP1006,,2026-08-21,Kolkata,Delhi,Delivered,7.5,280.0,Delhivery,2026-08-23
+SHP1007,CUST007,,Bangalore,Chennai,Pending,4.2,190.0,BlueDart,
+SHP1008, CUST008 ,2026-08-22,Hyderabad,Pune,Delivered,6.8,275.0,DTDC,2026-08-24
+SHP1009,CUST009,2026-08-22,Delhi,Kolkata,Cancelled,3.0,150.0,Delhivery,
+SHP1010,CUST010,2026-08-22, Chennai ,Mumbai,Delivered,11.3,475.0,BlueDart,2026-08-25
+SHP1011,CUST011,2026-08-23,Pune,Delhi,In Transit,9.4,350.0,DTDC,
+SHP1012,CUST012,2026-08-23,Mumbai,Hyderabad,Delivered,13.1,495.0,Delhivery,2026-08-25
+SHP1013,CUST013,2026-08-23,Kolkata,Bangalore,Pending,2.8,130.0,BlueDart,
+SHP1014,CUST014,2026-08-24,Delhi,Chennai,Delivered,18.0,650.0,DTDC,2026-08-26

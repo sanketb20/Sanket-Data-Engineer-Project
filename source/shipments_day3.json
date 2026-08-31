@@ -1,0 +1,130 @@
+[
+  {
+    "shipment_id": "SHP1025",
+    "customer_id": "CUST025",
+    "shipment_date": "2026-08-27",
+    "origin": "Bangalore",
+    "destination": "Mumbai",
+    "status": "Delivered",
+    "weight_kg": 10.5,
+    "shipping_cost": 395.0,
+    "carrier": "BlueDart",
+    "delivery_date": "2026-08-29",
+    "metadata": {
+      "source_system": "logistics_app",
+      "batch_id": "BATCH003"
+    }
+  },
+  {
+    "shipment_id": "SHP1026",
+    "customer_id": "CUST026",
+    "shipment_date": "27/08/2026",
+    "origin": "Delhi",
+    "destination": "Hyderabad",
+    "status": "In Transit",
+    "weight_kg": 6.4,
+    "shipping_cost": 260.0,
+    "carrier": "DTDC",
+    "delivery_date": null,
+    "metadata": {
+      "source_system": "logistics_app",
+      "batch_id": "BATCH003"
+    }
+  },
+  {
+    "shipment_id": "SHP1027",
+    "customer_id": "CUST027",
+    "shipment_date": "2026-08-28",
+    "origin": "Chennai",
+    "destination": "Delhi",
+    "status": "Delivered",
+    "weight_kg": 17.3,
+    "shipping_cost": 610.0,
+    "carrier": "Delhivery",
+    "delivery_date": "2026-08-30",
+    "metadata": {
+      "source_system": "logistics_app",
+      "batch_id": "BATCH003"
+    }
+  },
+  {
+    "shipment_id": "SHP1028",
+    "customer_id": "CUST028",
+    "shipment_date": "2026-08-28",
+    "origin": "Mumbai",
+    "destination": "Pune",
+    "status": "Pending",
+    "weight_kg": 4.9,
+    "shipping_cost": 215.0,
+    "carrier": "BlueDart",
+    "delivery_date": null,
+    "metadata": {
+      "source_system": "logistics_app",
+      "batch_id": "BATCH003"
+    }
+  },
+  {
+    "shipment_id": "SHP1029",
+    "customer_id": "CUST029",
+    "shipment_date": "2026/08/28",
+    "origin": "Hyderabad",
+    "destination": "Bangalore",
+    "status": "Delivered",
+    "weight_kg": 9.2,
+    "shipping_cost": 335.0,
+    "carrier": "DTDC",
+    "delivery_date": "2026-08-31",
+    "metadata": {
+      "source_system": "logistics_app",
+      "batch_id": "BATCH003"
+    }
+  },
+  {
+    "shipment_id": "SHP1030",
+    "customer_id": "",
+    "shipment_date": "2026-08-29",
+    "origin": "Kolkata",
+    "destination": "Delhi",
+    "status": "Delivered",
+    "weight_kg": 5.7,
+    "shipping_cost": 245.0,
+    "carrier": "Delhivery",
+    "delivery_date": "2026-08-31",
+    "metadata": {
+      "source_system": "logistics_app",
+      "batch_id": "BATCH003"
+    }
+  },
+  {
+    "shipment_id": "SHP1031",
+    "customer_id": "CUST031",
+    "shipment_date": null,
+    "origin": "Pune",
+    "destination": "Mumbai",
+    "status": "In Transit",
+    "weight_kg": 11.8,
+    "shipping_cost": 420.0,
+    "carrier": "BlueDart",
+    "delivery_date": null,
+    "metadata": {
+      "source_system": "logistics_app",
+      "batch_id": "BATCH003"
+    }
+  },
+  {
+    "shipment_id": "SHP1032",
+    "customer_id": " CUST032 ",
+    "shipment_date": "2026-08-29",
+    "origin": "Delhi",
+    "destination": "Chennai",
+    "status": "Delivered",
+    "weight_kg": 7.0,
+    "shipping_cost": 285.0,
+    "carrier": "DTDC",
+    "delivery_date": "2026-09-01",
+    "metadata": {
+      "source_system": "logistics_app",
+      "batch_id": "BATCH003"
+    }
+  }
+]
