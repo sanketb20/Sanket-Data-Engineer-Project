@@ -1,0 +1,2 @@
+weather,base,visibility,dt,timezone,id,name,cod,coord.lon,coord.lat,main.temp,main.feels_like,main.temp_min,main.temp_max,main.pressure,main.humidity,main.sea_level,main.grnd_level,wind.speed,wind.deg,clouds.all,sys.type,sys.id,sys.country,sys.sunrise,sys.sunset,weather_description,weather_main
+"[{'id': 804, 'main': 'Clouds', 'description': 'overcast clouds', 'icon': '04d'}]",stations,10000,1788937328,19800,1277333,Bengaluru,200,77.6033,12.9762,28.13,29.2,27.18,29.73,1012,56,1012,914,3.09,310,100,2,2113400,IN,1788914329,1788958542,overcast clouds,Clouds

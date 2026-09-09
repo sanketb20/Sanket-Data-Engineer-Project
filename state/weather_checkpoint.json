@@ -1,0 +1,21 @@
+{
+    "completed_cities": [
+        "Bengaluru",
+        "Mumbai",
+        "Delhi",
+        "Hyderabad",
+        "Chennai",
+        "Pune",
+        "Kolkata"
+    ],
+    "failed_cities": [
+        {
+            "city": "InvalidCityXYZ123",
+            "error": "404 Client Error: Not Found for url: https://api.openweathermap.org/data/2.5/weather?q=InvalidCityXYZ123&appid=62900ea4ef079f1c6aa476778c60f43a&units=metric",
+            "failed_at_utc": "2026-09-09T11:21:40.944870+00:00"
+        }
+    ],
+    "last_successful_city": "Kolkata",
+    "last_successful_file": "data\\weather_kolkata_20260909_165334.json",
+    "last_successful_fetch_utc": "2026-09-09T11:23:34.008634+00:00"
+}

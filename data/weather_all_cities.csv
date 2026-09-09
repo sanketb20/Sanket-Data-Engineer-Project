@@ -1,0 +1,8 @@
+city,country,temperature_c,feels_like_c,minimum_temperature_c,maximum_temperature_c,pressure_hpa,humidity_percent,wind_speed_mps,weather_condition,weather_description,latitude,longitude,api_timestamp,source_file
+Bengaluru,IN,29.52,30.36,27.76,30.84,1011,50,3.6,Clouds,overcast clouds,12.9762,77.6033,1788952762,weather_bengaluru_20260909_165136.json
+Chennai,IN,32.18,39.18,32.18,33.33,1005,71,5.06,Clouds,overcast clouds,13.0878,80.2785,1788952626,weather_chennai_20260909_165148.json
+Delhi,IN,35.96,40.53,35.05,35.96,1004,44,4.63,Clear,clear sky,28.6667,77.2167,1788952798,weather_delhi_20260909_165143.json
+Hyderabad,IN,31.23,34.1,25.73,31.23,1010,55,5.14,Clouds,broken clouds,17.3753,78.4744,1788952569,weather_hyderabad_20260909_165146.json
+Kolkata,IN,31.97,38.97,31.97,31.97,1001,74,2.06,Rain,moderate rain,22.5697,88.3697,1788952662,weather_kolkata_20260909_165334.json
+Mumbai,IN,30.99,35.33,29.94,30.99,1010,62,6.17,Clouds,few clouds,19.0144,72.8479,1788952302,weather_mumbai_20260909_165138.json
+Pune,IN,29.67,28.16,29.67,29.67,1010,25,6.01,Clouds,scattered clouds,18.5196,73.8553,1788952248,weather_pune_20260909_165150.json
