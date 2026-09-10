@@ -10,11 +10,13 @@ from checkpoint import load_checkpoint, save_checkpoint
 CITIES_FILE = Path("config/cities.txt")
 DATA_DIR = Path("data")
 
-REQUEST_DELAY = 2
+# Delay between API requests to avoid excessive API calls
+REQUEST_DELAY_SECONDS = 2
 
 
 def load_cities():
     """Read city names from the configuration file."""
+
     if not CITIES_FILE.exists():
         raise FileNotFoundError(
             f"Cities configuration file not found: {CITIES_FILE}"
@@ -29,7 +31,7 @@ def load_cities():
 
 
 def ingest_multiple_cities():
-    """Fetch weather data and resume from the checkpoint."""
+    """Fetch weather data for multiple cities and resume from checkpoint."""
 
     cities = load_cities()
     checkpoint = load_checkpoint()
@@ -47,24 +49,29 @@ def ingest_multiple_cities():
 
     for index, city in enumerate(cities, start=1):
 
-        # Skip cities already processed successfully
+        # Skip cities that were already processed successfully
         if city in completed_cities:
             print(f"\n[{index}/{len(cities)}] Skipping: {city}")
             print("Already completed in checkpoint.")
+
             skipped += 1
             continue
 
         print(f"\n[{index}/{len(cities)}] Processing: {city}")
 
         try:
+            # Call the weather API
             weather = get_weather(city)
 
+            # Create data directory if it does not exist
             DATA_DIR.mkdir(exist_ok=True)
 
+            # Generate timestamp for the output file
             timestamp = datetime.now().strftime(
                 "%Y%m%d_%H%M%S"
             )
 
+            # Convert city name into a safe filename
             safe_city_name = city.lower().replace(" ", "_")
 
             file_path = (
@@ -72,9 +79,11 @@ def ingest_multiple_cities():
                 / f"weather_{safe_city_name}_{timestamp}.json"
             )
 
+            # Save raw API response
             with open(file_path, "w", encoding="utf-8") as file:
                 json.dump(weather, file, indent=4)
 
+            # Update checkpoint after successful ingestion
             save_checkpoint(
                 city=city,
                 source_file=str(file_path),
@@ -89,6 +98,7 @@ def ingest_multiple_cities():
 
             print(f"Failed to process {city}: {error}")
 
+            # Record failed city in checkpoint
             save_checkpoint(
                 city=city,
                 source_file="",
@@ -98,9 +108,14 @@ def ingest_multiple_cities():
 
             failed += 1
 
+        # Rate limiting between API requests
         if index < len(cities):
-            print(f"Waiting {REQUEST_DELAY} seconds...")
-            time.sleep(REQUEST_DELAY)
+            print(
+                f"Waiting {REQUEST_DELAY_SECONDS} seconds "
+                "before the next request..."
+            )
+
+            time.sleep(REQUEST_DELAY_SECONDS)
 
     print("\n========== INGESTION SUMMARY ==========")
     print(f"Successful cities: {successful}")
