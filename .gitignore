@@ -21,3 +21,6 @@ htmlcov/
 # Temporary files
 *.tmp
 *.log
+
+# Application logs
+logs/

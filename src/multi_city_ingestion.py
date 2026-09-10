@@ -5,14 +5,14 @@ from datetime import datetime
 
 from api_client import get_weather
 from checkpoint import load_checkpoint, save_checkpoint
-
+from logger_config import get_logger
 
 CITIES_FILE = Path("config/cities.txt")
 DATA_DIR = Path("data")
 
 # Delay between API requests to avoid excessive API calls
 REQUEST_DELAY_SECONDS = 2
-
+logger = get_logger()
 
 def load_cities():
     """Read city names from the configuration file."""
@@ -36,6 +36,9 @@ def ingest_multiple_cities():
     cities = load_cities()
     checkpoint = load_checkpoint()
 
+    logger.info("Multi-city ingestion started")
+    logger.info(f"Total cities configured: {len(cities)}")
+
     completed_cities = set(
         checkpoint.get("completed_cities", [])
     )
@@ -51,13 +54,17 @@ def ingest_multiple_cities():
 
         # Skip cities that were already processed successfully
         if city in completed_cities:
+            
             print(f"\n[{index}/{len(cities)}] Skipping: {city}")
             print("Already completed in checkpoint.")
+
+            logger.info(f"Skipping already completed city: {city}")
 
             skipped += 1
             continue
 
         print(f"\n[{index}/{len(cities)}] Processing: {city}")
+        logger.info(f"Processing city: {city}")
 
         try:
             # Call the weather API
@@ -92,11 +99,20 @@ def ingest_multiple_cities():
 
             print(f"Successfully saved: {file_path}")
 
+            logger.info(
+                f"Successfully processed {city}; "
+                f"saved file: {file_path}"
+            )
+
             successful += 1
 
         except Exception as error:
 
             print(f"Failed to process {city}: {error}")
+
+            logger.error(
+                f"Failed to process {city}: {error}"
+            )
 
             # Record failed city in checkpoint
             save_checkpoint(
@@ -116,7 +132,12 @@ def ingest_multiple_cities():
             )
 
             time.sleep(REQUEST_DELAY_SECONDS)
-
+    logger.info(
+        f"Ingestion completed | "
+        f"Successful: {successful} | "
+        f"Skipped: {skipped} | "
+        f"Failed: {failed}"
+    )
     print("\n========== INGESTION SUMMARY ==========")
     print(f"Successful cities: {successful}")
     print(f"Skipped cities: {skipped}")
